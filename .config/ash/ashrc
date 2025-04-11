@@ -1,0 +1,21 @@
+#!/bin/sh
+
+stty -ixon
+
+# set vi line editing
+set -o vi
+
+alias ls="ls --color=auto"
+alias la="ls -ah  --group-directories-first --color=auto"
+alias ll="ls -ahl --group-directories-first --color=auto"
+
+alias c='clear'
+alias ..="cd .."
+
+alias mv="mv -v"
+alias mkdir="mkdir -v"
+
+# git aliases
+alias gs="git -p status"
+alias gp="git push"
+

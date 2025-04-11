@@ -1,0 +1,13 @@
+reload-period 10
+scrolloff 5
+menu-feed-sorting unread-desc
+
+# color
+color-list-item-unread    blue bold
+color-list-section-unread blue bold
+color-list-feed-unread    blue bold
+
+# bindings
+bind m exec mpv --no-terminal "%l" &
+bind f exec nsxiv "%l"
+
