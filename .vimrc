@@ -20,3 +20,10 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox
 
+nmap ex :Ex<CR>
+
+nmap bn :bnext<CR>
+nmap bp :bprevious<CR>
+nmap bd :bdelete<CR>
+nmap bl :buffers<CR>
+
