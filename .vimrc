@@ -9,6 +9,7 @@ filetype plugin indent on
 syntax on
 
 set relativenumber
+set colorcolumn=100
 
 set shiftwidth=2
 set tabstop=2
