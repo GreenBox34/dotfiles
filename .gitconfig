@@ -2,3 +2,5 @@
 	name  = Julian
   email = zi0n7@tutanota.com
 
+[init]
+	defaultBranch = master
