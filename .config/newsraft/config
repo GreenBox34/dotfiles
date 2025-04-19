@@ -1,6 +1,7 @@
 reload-period 10
 scrolloff 5
 menu-feed-sorting unread-desc
+menu-item-sorting unread-desc
 
 # color
 color-list-item-unread    blue bold
