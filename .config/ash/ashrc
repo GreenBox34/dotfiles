@@ -2,6 +2,9 @@
 
 stty -ixon
 
+# run weather script from $HOME/.local/bin
+weather
+
 # set vi line editing
 set -o vi
 
