@@ -2,7 +2,7 @@
 
 export ENV="$HOME/.config/ash/ashrc"
 export PATH="$PATH:$HOME/.local/bin"
-export EDITOR="vim"
+export EDITRO="vi"
 export HISTFILE="$HOME/.config/ash/ash_history"
 export HISTSIZE=127
 export GRIM_DEFAULT_DIR="$HOME/Pictures"
