@@ -8,6 +8,8 @@ call plug#end()
 filetype plugin indent on	
 syntax on
 
+set viminfo+=n~/.vim/viminfo
+
 set relativenumber
 set colorcolumn=100
 
