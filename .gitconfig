@@ -1,6 +1,9 @@
 [user]
 	name  = Julian
   email = zi0n7@tutanota.com
-
+	signingkey = 9E1D4B3700BD8C4A92C861FA5F384113102FFB4D
 [init]
 	defaultBranch = master
+[commit]
+  gpgsign = true
+
