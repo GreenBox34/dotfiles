@@ -6,5 +6,5 @@
 
 # This file is Licensed under the BSD 0-Clause License.
 
-curl de.wttr.in/?format=4
+curl de.wttr.in/?format=4 || printf "could not get weather\n" && exit 1
 
