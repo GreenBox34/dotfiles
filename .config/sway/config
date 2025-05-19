@@ -7,7 +7,7 @@ set $down j
 set $up k
 set $right l
 
-set $term footclient
+set $term foot
 
 ### Application launcher
 set $menu dmenu_path | wmenu-run | xargs swaymsg exec --
@@ -18,11 +18,12 @@ exec swayidle -w                                                                
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'        \
     before-sleep 'swaylock -f -c 000000 --indicator-radius 100 --indicator-thickness 13'
 
-### set wallpaper
-exec_always swaybg -c "#000000" -m solid_color
-
 ### hide cursor when typing
 seat * hide_cursor when-typing enable
+
+output eDP-1 mode 1366x768@60Hz
+
+output * bg #1d2021 solid_color
 
 ### allow tearing
 # output * allow_tearing yes
@@ -36,7 +37,8 @@ input "type:touchpad" {
 }
 
 input "type:keyboard" {
-      xkb_layout de
+      # xkb_layout de
+      xkb_layout us
       xkb_options caps:escape
       repeat_delay 250
       repeat_rate 50
@@ -155,7 +157,7 @@ for_window [window_role="dialog"] floating enable
 
 ### Audio bindings.
 bindsym --locked XF86AudioMicMute     exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym --locked XF86AudioMute        exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --locked XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
 
@@ -165,9 +167,9 @@ bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 ### Autostart.
 exec --no-startup-id mako &
-exec --no-startup-id foot --server &
 
 bar {
+    mode hide
     font pango:DejaVu Sans Mono, FontAwesome 10
     position top
     status_command i3status
