@@ -1,24 +1,35 @@
+" VIM Configuration File
 set nocompatible
+set viminfo+=n~/.vim/viminfo
 
 call plug#begin()
   Plug 'morhetz/gruvbox'
-
 call plug#end()
 
-filetype plugin indent on	
+filetype plugin indent on
 syntax on
 
-set viminfo+=n~/.vim/viminfo
+set encoding=utf-8
+set fileencoding=utf-8
+set termencoding=utf-8
 
-set relativenumber
-set colorcolumn=100
+set number
+set textwidth=120
+set colorcolumn=120
+set cursorline
+set nowrap
 
-set shiftwidth=2
+set autoindent
+set smartindent
+
 set tabstop=2
+set shiftwidth=2
 set expandtab
 
-let g:gruvbox_contrast_dark='hard'
 set t_Co=256
+syntax enable
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_bold=1
 set background=dark
 colorscheme gruvbox
 
@@ -48,8 +59,9 @@ nmap wt :call Toggle_whitespace()<CR>
 
 nmap ex :Ex<CR>
 
-nmap bn :bnext<CR>
-nmap bp :bprevious<CR>
+nmap bn :bnext!<CR>
+nmap bp :bprevious!<CR>
 nmap bd :bdelete<CR>
 nmap bl :buffers<CR>
 
+" vim: et sw=2 ts=2
