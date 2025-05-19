@@ -8,6 +8,8 @@ weather
 # set vi line editing
 set -o vi
 
+export GPG_TTY=$(tty)
+
 alias ls="ls --color=auto"
 alias la="ls -ah  --group-directories-first --color=auto"
 alias ll="ls -ahl --group-directories-first --color=auto"
