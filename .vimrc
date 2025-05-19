@@ -22,6 +22,30 @@ set t_Co=256
 set background=dark
 colorscheme gruvbox
 
+" functions
+
+let g:enable_whitespace = 0
+function! Toggle_whitespace()
+  if g:enable_whitespace == 0
+    let g:enable_whitespace = 1
+  else
+    let g:enable_whitespace = 0
+  endif
+  if g:enable_whitespace == 0
+    set nolist
+  endif
+  if g:enable_whitespace == 1
+    set list
+    set listchars+=space:.
+  endif
+endfunction
+
+call Toggle_whitespace()
+
+" mappings
+
+nmap wt :call Toggle_whitespace()<CR>
+
 nmap ex :Ex<CR>
 
 nmap bn :bnext<CR>
