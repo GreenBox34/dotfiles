@@ -1,0 +1,24 @@
+URxvt.font: xft:mononoki-Regular:pixelsize=22
+URxvt.scrollBar: false
+
+! colorscheme (modus-vivendi like)
+URxvt.background: #000000
+URxvt.foreground: #ffffff
+
+URxvt.color0: #000000
+URxvt.color1: #ff8059
+URxvt.color2: #44bc44
+URxvt.color3: #d0bc00
+URxvt.color4: #2fafff
+URxvt.color5: #feacd0
+URxvt.color6: #00d3d0
+URxvt.color7: #191a1b
+
+URxvt.color8:  #100f10
+URxvt.color9:  #ef8b50
+URxvt.color10: #70b900
+URxvt.color11: #c0c530
+URxvt.color12: #79a8ff
+URxvt.color13: #f78fe7
+URxvt.color14: #6ae4b9
+URxvt.color15: #e0e6f0
