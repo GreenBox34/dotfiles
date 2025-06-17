@@ -1,0 +1,18 @@
+
+alias reload  exec ratpoison -c "source $HOME/.ratpoisonrc"
+alias term    exec "urxvt"
+alias browser exec "firefox"
+alias emacs   exec "emacs"
+
+bind c term
+bind W browser
+bind e emacs
+
+definekey top  XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+definekey top  XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+definekey top  XF86AudioMute        exec pactl set-sink-mute   @DEFAULT_SINK@ toggle
+
+
+
+
+
