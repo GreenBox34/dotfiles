@@ -1,4 +1,4 @@
-URxvt.font: xft:mononoki-Regular:pixelsize=22
+URxvt.font:xft:DejaVuSansMono:pixelsize=18
 URxvt.scrollBar: false
 
 ! colorscheme (modus-vivendi like)
