@@ -6,4 +6,13 @@
 .config/cmus/playlists/
 .config/cmus/search-history
 .config/newsraft/feeds
-
+.config/emacs/eln-cache/
+.config/emacs/elpa/
+.config/emacs/.elfeed/
+.config/emacs/eshell/
+.config/emacs/emms/
+.config/emacs/transient/
+custom-vars.el
+.mc-lists.el
+*~
+*.elc
