@@ -22,3 +22,25 @@ URxvt.color12: #79a8ff
 URxvt.color13: #f78fe7
 URxvt.color14: #6ae4b9
 URxvt.color15: #e0e6f0
+
+! colorscheme (gruvbox)
+! URxvt.background: #1d2021
+! URxvt.foreground: #ebdbb2
+!
+! URxvt.color0: #1d2021
+! URxvt.color1: #cc241d
+! URxvt.color2: #98971a
+! URxvt.color3: #d79921
+! URxvt.color4: #458588
+! URxvt.color5: #b16286
+! URxvt.color6: #689d6a
+! URxvt.color7: #a89984
+
+! URxvt.color8:  #928374
+! URxvt.color9:  #fb4934
+! URxvt.color10: #b8bb26
+! URxvt.color11: #fabd2f
+! URxvt.color12: #83a598
+! URxvt.color13: #d3869b
+! URxvt.color14: #8ec07c
+! URxvt.color15: #ebdbb2
