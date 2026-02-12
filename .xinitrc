@@ -7,7 +7,7 @@ setxkbmap -option caps:escape
 xss-lock --transfer-sleep-lock -- i3lock --nofork -c 000000 &
 xss-lock --transfer-sleep-lock -- slock &
 
-unclutter &
+xhidecursor &
 
 xset r rate 250 50
 
