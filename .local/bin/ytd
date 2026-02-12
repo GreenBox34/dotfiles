@@ -1,53 +1,67 @@
 #!/bin/sh
 #
+# -*- mode: sh; sh-basic-offset: 2; -*-
+# vim: et sw=2
+#
 # Script Name: ytd
-# Description: This script automates yt-dlp for easy downloading 
+# Description: This script automates yt-dl for easy downloading
 # License: BSD 0-Clause License
 # Author: https://github.com/GreenBox34
 
 youtube_binary="yt-dlp"
 audio_dir="$HOME/Music"
 video_dir="$HOME/Videos"
+audio_flags="--embed-metadata --prefer-free-formats"
+video_flags="--prefer-free-formats --write-auto-subs --embed-metadata \
+				   --embed-thumbnail --embed-subs"
 
-if [ ${#1} -eq 0 ]; then
-  echo "Usage: "
-  echo "      'ytd audio link' -- Download audio in $audio_format format."
-  echo "      'ytd video link' -- Download video."
-  exit 0
-fi
+usage=$(cat <<_EOF
+Usage:
+      ytd audio link -- Download audio.
+      ytd video link -- Download video.
+_EOF
+     )
 
-echo "Checking connectivity..."
-
-test=duckduckgo.com
-if nc -zw2 $test 443; then
-  echo "We have connectivity."
-else
-  echo "We dont have connectivity :("
+die ()
+{
+  printf '%s\n' "${@}" 1>&2
   exit 1
-fi
+}
 
-if [ "$1" = audio ]; then
-  cd "$audio_dir" || exit
+get_audio ()
+{
+  cd "$audio_dir" || exit 1
+  mkdir -p "${audio_dir}"
 
-  if [ ${#2} -ne 0 ]; then
-    $youtube_binary --embed-metadata --prefer-free-formats -x "$2"
+  if [ ${#1} -ne 0 ]; then
+    ${youtube_binary} ${audio_flags}  -x "${1}"
+  else
+    die "Provide a link."
+  fi
+}
+
+get_video ()
+{
+  cd "$video_dir" || exit 1
+  mkdir -p "${video_dir}"
+
+  if [ ${#1} -ne 0 ]; then
+    ${youtube_binary} ${video_flags} "${1}"
+  else
+    die "Provide a link."
+  fi
+}
+
+case "${1}" in
+  "audio")
+    get_audio "${2}"
     exit 0
-  else 
-    echo "Provide a link."
-    exit 1
-  fi
-fi
-
-if [ "$1" = video ]; then
-  cd "$video_dir" || exit
-
-  if [ ${#2} -ne 0 ]; then
-    $youtube_binary --prefer-free-formats --write-auto-subs --embed-metadata \
-      --embed-thumbnail --embed-subs "$2"
-          exit 0
-        else 
-          echo "Provide a link."
-          exit 1
-  fi
-fi
-
+    ;;
+  "video")
+    get_video "${2}"
+    exit 0
+    ;;
+  *)
+    printf "%s\n" "${usage}"
+    ;;
+esac
