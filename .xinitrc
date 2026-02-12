@@ -11,4 +11,5 @@ xhidecursor &
 
 xset r rate 250 50
 
-dbus-run-session ratpoison
+slstatus &
+dbus-run-session dwm
