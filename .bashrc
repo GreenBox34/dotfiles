@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -o emacs
 export GPG_TTY=$(tty)
 export PATH="$PATH:$HOME/.local/bin"
 export EDITRO="nano"
