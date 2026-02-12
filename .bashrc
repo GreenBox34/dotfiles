@@ -17,6 +17,7 @@ alias c='clear'
 alias ..="cd .."
 alias mv="mv -v"
 alias mkdir="mkdir -v"
+alias rm="rm -v"
 
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
