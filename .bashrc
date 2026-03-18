@@ -3,7 +3,7 @@
 set -o emacs
 export GPG_TTY=$(tty)
 export PATH="$PATH:$HOME/.local/bin"
-export EDITRO="nano"
+export EDITOR="nano"
 export HISTSIZE=256
 export HISTFILESIZE=256
 export HISTCONTROL="erasedups:ignorespace"
