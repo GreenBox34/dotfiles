@@ -14,5 +14,7 @@ xset r rate 250 50 &
 
 feh --no-fehbg --bg-fill ${WALLPAPER_PATH}
 
+emacs --daemon &
+
 slstatus &
 dbus-run-session dwm
