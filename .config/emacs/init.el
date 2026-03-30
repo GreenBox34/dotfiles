@@ -128,6 +128,7 @@
 
 ;;; External packages
 (use-package all-the-icons-dired
+  :if (display-graphic-p)
   :pin melpa
   :ensure t
   :hook (dired-mode . all-the-icons-dired-mode))
