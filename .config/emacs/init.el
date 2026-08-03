@@ -248,7 +248,7 @@
 
 (use-package elfeed
   :ensure-system-package mpv
-  :pin melpa
+  :pin nongnu
   :ensure t
   :defer t
   :preface
