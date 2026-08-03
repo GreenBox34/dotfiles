@@ -38,8 +38,12 @@
   (fill-column 100)
   :bind (("<escape>" . keyboard-escape-quit))
   :config
+
+  (setq ring-bell-function 'ignore)
+
   (add-to-list 'default-frame-alist
-	       '(font . "DejaVu Sans Mono-12:bold:italic"))
+	       '(font . "DejaVu Sans Mono-18:bold:italic"))
+
 
   (add-hook 'prog-mode-hook (lambda ()
 			      (setq display-line-numbers 'relative)))
@@ -59,8 +63,7 @@
 (use-package whitespace
   :custom (whitespace-line-column nil "if nil, use the value of the ‘fill-column’ variable")
   :bind (("C-c w" . whitespace-mode)
-	 ("C-c c" . whitespace-cleanup))
-  :hook ((c-mode . whitespace-mode)))
+	 ("C-c c" . whitespace-cleanup)))
 
 (use-package icomplete
   :custom
@@ -127,6 +130,7 @@
   (dired-isearch-filenames t))
 
 ;;; External packages
+
 (use-package all-the-icons-dired
   :if (display-graphic-p)
   :pin melpa
