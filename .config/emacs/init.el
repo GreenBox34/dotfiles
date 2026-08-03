@@ -244,7 +244,7 @@
   :pin nongnu
   :ensure t
   :defer t
-  :mode ("\\.s\\'" "\\.S\\'" "\\.asm\\'" ))
+  :mode ("\\.s\\'" "\\.S\\'" "\\.asm\\'" "\\.inc\\'"))
 
 (use-package elfeed
   :ensure-system-package mpv
